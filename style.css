@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+  --main-color: #5c5050;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +12,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: black;
 }
 
 main {
@@ -27,29 +33,39 @@ main {
   padding: 10px;
   border-radius: 5px;
   margin-left: 10px;
-  background-color: #beb5b5;
+  background-color: var(--main-color);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   font-weight: bold;
+}
+
+a {
+ color: rgb(9, 104, 104); 
 }
 
 .current-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .current-wrapper.pause::after {
-  content: '⏸';
+  content: '▐▐';
   position: absolute;
   left: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 input {
   padding: 5px;
   border-radius: 5px;
-  border-color: gray;
-  border-style: solid;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  font-size: 17px;
 }
 
 input:not([type='number']):hover {
